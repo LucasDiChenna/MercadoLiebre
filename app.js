@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 const path = require('path')
 
 app.get('/', function (req, res) {
-    response.sendFile(path.join(__dirname, 'views/index.html')
+    res.send('Hola mundo!')
 })
 
 app.get('/home', function(request, response){
