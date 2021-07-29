@@ -11,6 +11,13 @@ app.get('/home', function(request, response){
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
+app.get('/register', function(request, response){
+    response.sendFile(path.join(__dirname, 'views/register.html'))
+})
+app.get('/login', function(request, response){
+    response.sendFile(path.join(__dirname, 'views/login.html'))
+})
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
@@ -18,6 +25,6 @@ app.get('*', function (request, response){
 })
 
 app.listen(port, ()=>{
-    console.log('La app esta funcionado en http://localhost:'+ port)
+    console.log('La app esta funcionado en http://localhost:'+ port +"/home")
 })
 

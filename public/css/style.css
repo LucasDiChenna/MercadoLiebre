@@ -1,5 +1,699 @@
 /* Version 1 */
 
+* {
+  box-sizing: border-box;
+  
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+main {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  background-color: rgb(235, 235, 235);
+}
+
+h2 {
+  font-size: 24px;
+}
+
+main section {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main article {
+  margin-bottom: 10px;
+  background-color: white;
+  width: 90%;
+}
+
+
+main article #caja {
+  background-color: white;
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+main h2{
+    
+  color: rgb(91,91,91)
+}
+
+main section article div i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 5%;
+}
+
+footer article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10%;
+}
+
+footer i {
+  color: rgba(0,68,169,1);
+  font-size: 200%;
+}
+
+.footer-title {
+  font-weight: bold;
+  padding-top: 5%;
+}
+
+.footer-subtitle {
+  font-size: 95%;
+  margin-bottom: 10%;
+}
+
+.copyright {
+  font-size: 80%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+}
+
+.precios {
+  font-size: 18px;
+  width: 30%;
+}
+
+.fa-truck {
+  color: #39b54a;
+    transition: transform 500ms ease-in-out;
+}
+
+img {
+  width: 90%;
+}
+
+.desc {
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  color: grey;
+}
+
+.descuento {
+  color: #39b54a;
+  font-size: 16px;
+  width: 70%;
+  text-align: left;
+  padding-top: 2px
+}
+
+.fondoamarillo {
+  background-color: #EAC926;
+  height: 173px;
+}
+
+.navbar-div{
+  justify-content: flex-end;
+}
+
+.fa-bars {
+  color: white;
+  background-color: rgba(0,68,169,1);
+  padding: 10px 10px;
+  border-radius: 10%;
+  font-size: 1rem;
+  margin-bottom: 50%;
+}
+
+.burger-menu {
+  text-align: center;
+  width: auto;
+  padding-bottom: 5%;
+}
+
+#textazo {
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.logo {
+  width: 40%;
+  margin-left: 4%;
+  margin-top: 5%;
+}
+
+.banner{
+  margin-top: 173px;
+  width: 100%;
+}
+
+.barrabusqueda {
+  background-color: white;
+  display: flex;
+  width: 45%;
+  border-radius: 5px;
+  border: #ebebeb 1px solid;
+  margin-top: 5%;
+  padding: 2%;
+  font-size: 125%;
+  margin-right: 5%;
+  margin-left: 2%;
+  align-items: center;
+}
+
+.fa-search {
+  color: #666666;
+  padding: 4px;
+  border-left: 2px #ebebeb solid;
+  margin: auto;
+  padding: auto;
+}
+
+.busq {
+  border: transparent;
+  height: 90%;
+  width: 90%;
+  background-color: transparent;
+  font-size: 80%;
+  text-align: center;
+}
+
+.compracuotas {
+  font-size: 0.9rem;
+  height: auto;
+  margin: 2% 5%;
+  width: 100%;
+}
+
+.compracuotas p{
+    text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.navbar {
+  display: none;
+}
+
+.create-form {
+  padding: 20px 15px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  margin-bottom: 5px;
+  font-style: italic;
+  display: block;
+}
+
+.control {
+  width: 100%;
+  padding: 8px;
+}
+
+.form-control label {
+  margin-bottom: 5px;
+  font-style: italic;
+  display: block;
+}
+
+.form-button {
+  background-color: #39b54a;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.register {
+  width: 100%;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register label {
+  margin-top: 5px;
+  font-style: italic;
+  font-size: larger;
+  align-items: stretch;
+}
+
+.register-ctrl {
+  border-radius: 10px;
+  border-style: none;
+  font-size: 10px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.login {
+
+  padding: 10px 0%;
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginmain{
+  margin-top: 100px;
+}
+
+.login input {
+  margin-top: 5%;
+  border-radius: 5%;
+  border: none;
+  justify-content: center;
+  padding: 3%;
+  width: 100%;
+  margin-bottom: 5%;
+  font-style: italic;
+  display: flex;
+  font-size: larger;
+}
+
+.login.control {
+  width: 80%;
+}
+
+.register-button {
+  margin: 25px 0;
+  font-size: larger;
+  border-radius: 5%;
+  border: none;
+  background-color: #03264C;
+  padding: 5%;
+  color: white;
+}
+
+.register-button:hover{
+  background-color: #0022AA;
+}
+
+
+.interest-categories {
+  display: flex;
+  width: 50%;
+}
+
+.topnavbar{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 481px) {
+  
+
+  .fondoamarillo{
+      height: 140px;
+  }
+
+  .logo {
+    width: 16%;
+    margin-top: 2%;
+    margin-left: 2%;
+    justify-content: flex-start;
+  }
+
+  h2 {
+    margin-left: 5%;
+  }
+
+  .desc{
+    width: 100%;
+    opacity: 1;
+    padding: 7% 7%;
+    text-align: start;
+    background-color: rgb(235, 235, 235);
+    color: rgb(235, 235, 235);
+  }
+
+  .topnavbar{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+  }
+  
+  .banner{
+      margin-top: 140px;
+      width: 100%;
+  }
+
+  .barrabusqueda {
+    background-color: white;
+    height: 30%;
+    display: flex;
+    border-radius: 5px;
+    border: #ebebeb 1px solid;
+    margin-top: 2%;
+      margin-right: 0;
+    font-size: 90%;
+    width: 45%;
+  }
+
+  .fa-search {
+    color: #666666;
+    padding: 4px;
+    border-left: 2px #ebebeb solid;
+    margin: auto;
+    padding: auto;
+  }
+  
+  .footer-title{
+      padding-top: 2%;
+  }
+
+  .busq {
+    border: transparent;
+    height: 90%;
+    width: 90%;
+    background-color: transparent;
+    font-size: 120%;
+    text-align: left;
+  }
+
+  .compracuotas {
+    height: auto;
+    margin-left: 0;
+    width: auto;
+    margin-right: 0;
+    text-align: right;
+    font-size: 100%;
+    margin-top: 3%;
+  }
+      
+  .burger-menu {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+      margin-top: 2%;
+  }
+
+  .navbar-div{
+      width: 100%;   
+  }
+
+  .lista1 {
+    margin-left: -2%;
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    list-style-type: none;
+  }
+
+  .lista2 {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    list-style-type: none;
+    margin-right: 3%;
+  }
+
+  h2 {
+    width: auto;
+    text-align: left;
+  }
+
+  .login {
+    width: 100%;
+    margin-top: 0;
+  }
+  .loginmain{
+    margin-top: 140px;
+  }
+  
+  .loginmain h1{
+    font-size: 300%;
+  }
+
+  .register-button{
+    margin: 10% 0;
+  }
+
+  .loginusername{
+    padding: 5% 0;
+  }
+
+  section{
+      margin: 5%;
+  }
+
+  section article {
+    width: 40%;
+    margin: 5%;
+  }
+
+  footer article{
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 80%;
+  }
+}
+
+@media (min-width: 801px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  main {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    background-color: rgb(235, 235, 235);
+  }
+
+  .logo {
+    width: 12%;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+  
+  .topnavbar{
+  flex-wrap: nowrap;
+  align-items: center;
+  }
+
+  main h2{
+    margin-left: 4%;
+  }
+
+  .barrabusqueda {
+    background-color: white;
+    display: flex;
+    height: 20%;
+    border-radius: 5px;
+    border: #ebebeb 1px solid;
+    margin-top: 2px;
+    padding: 1%;
+    margin-left: 0%;
+    width: 60%;
+  }
+
+  .fa-search {
+    color: #666666;
+    padding: 4px;
+    border-left: 2px #ebebeb solid;
+    padding: auto;
+    margin-right:-1%;
+  }
+
+  .busq {
+    border: transparent;
+    height: 30%;
+    width: 90%;
+    background-color: transparent;
+    font-size: 120%;
+    text-align: left;
+  }
+
+  .compracuotas {
+    height: auto;
+    width: 20%;
+    text-align: right;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .descuento{
+    text-align: center;
+  }
+
+  .desc{
+    width: 100%;
+    opacity: 1;
+    padding: 7% 7%;
+    text-align: start;
+    background-color: rgb(235, 235, 235);
+    color: rgb(235, 235, 235);
+  }
+
+  article:hover .desc{
+    display: block;
+    background-color: white;
+    color: black;
+  }
+
+  article:hover .fa-truck{
+    transform: rotate(-90deg);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+  }
+  .lista1 {
+    justify-content: space-evenly;
+    width: 28%;
+    list-style-type: none;
+    margin-left: -2%;
+    
+  }
+
+  .lista2 {
+    justify-content: space-evenly;
+    width: 28%;
+    list-style-type: none;
+    margin-right: 3%;
+  }
+
+  main section{
+    margin: 0%;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  img{
+    width: 100%;
+  }
+  
+  section article {
+    width: 20%;
+    margin: 1%;
+     }
+  
+  main section article:hover {
+    box-shadow: 0px 0px 2px 2px black;
+  }
+
+  footer{
+    padding: 0;
+  }
+  
+  footer section{
+    margin 5% 0;
+  }
+
+  
+
+  main article #caja { 
+    padding: 5% ;
+  }
+  
+  .ofertas{
+    inh
+  }
+
+  footer article {
+    width: 100%;
+  }
+
+  .loginusername{
+    padding: 0;
+  }
+  
+  .register-button{
+    margin: 5% 0;
+  }
+
+  .footer-title {
+    font-weight: bold;
+    padding-top: 2%;
+  }
+
+  .footer-subtitle {
+    font-size: 95%;
+    margin-bottom: 0%;
+  }
+
+footer i {
+    font-size: 400%;
+}
+
+footer i:hover{
+  
+  color: #03264C;
+}
+
+.footerItems{
+  flex-direction: row;
+  display: flex;
+}
+  
 }
