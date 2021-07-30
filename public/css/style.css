@@ -84,7 +84,9 @@ footer article {
 
 footer i {
   color: rgba(0,68,169,1);
-  font-size: 200%;
+  font-size: 2em;
+  transition: all 500ms ease-in-out;
+  margin-bottom: 10px;
 }
 
 .footer-title {
@@ -723,9 +725,6 @@ header {
     margin-bottom: 0%;
   }
 
-  footer i {
-    font-size: 400%;
-  }
 
   footer i:hover{
     color: #03264C;
