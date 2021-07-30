@@ -272,7 +272,6 @@ header {
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  margin-top: 173px;
 }
 
 .user-profile{
@@ -341,10 +340,12 @@ header {
   background-color: #03264C;
   padding: 5%;
   color: white;
+  transition: all 500ms;
+  box-shadow: #222222 2px;
 }
 
 .register-button:hover{
-  background-color: #0022AA;
+ background-color: #0022AA;
 }
 
 
@@ -377,6 +378,10 @@ header {
 
   h2 {
     margin-left: 5%;
+  }
+
+  .register div{
+    width: 50%;
   }
 
   .desc{
@@ -429,7 +434,10 @@ header {
 
   .register{
     font-size:x-large;
+    justify-content: center;
+    align-items: center;
   }
+
 
   .busq {
     border: transparent;
@@ -501,6 +509,7 @@ header {
 
   .register-button{
     margin: 10% 0;
+    width: 50%;
   }
 
   .loginusername{
@@ -728,9 +737,17 @@ header {
     width: 50%;
   }
 
+  .register div input{
+    font-size: large;
+  }
+
   .footerItems{
   flex-direction: row;
   display: flex;
+  }
+  
+  .register-ctrl{
+    padding: 20px;
   }
   
 }
